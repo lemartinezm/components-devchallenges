@@ -9,7 +9,19 @@ function App() {
         <Button variant="default">Default</Button>
         <Button variant="outline">Default</Button>
         <Button variant="text">Default</Button>
-        <Button disabled variant="text">
+        <Button disabled disableShadow color="danger" variant="default">
+          Default
+        </Button>
+        <Button
+          disabled
+          endIcon="add"
+          size="sm"
+          color="primary"
+          variant="outline"
+        >
+          Default
+        </Button>
+        <Button disabled color="danger" variant="text">
           Default
         </Button>
       </div>

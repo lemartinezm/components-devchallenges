@@ -33,7 +33,7 @@ export const Button = (props: ButtonProps) => {
 
   const className = !disabled
     ? `${variant} color-${color} ${disableShadow && "disable-shadow"} ${size}`
-    : undefined;
+    : `${variant}-disabled ${size} ${disableShadow && "disable-shadow"}`;
 
   return (
     <button className={className} disabled={disabled} {...otherProps}>
