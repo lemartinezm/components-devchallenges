@@ -15,7 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   startIcon?: keyof typeof IconList;
   endIcon?: keyof typeof IconList;
-  sizes?: keyof typeof ButtonSizes;
+  size?: keyof typeof ButtonSizes;
 }
 
 export const Button = (props: ButtonProps) => {
@@ -27,11 +27,12 @@ export const Button = (props: ButtonProps) => {
     disabled = false,
     startIcon,
     endIcon,
+    size = "md",
     ...otherProps
   } = props;
 
   const className = !disabled
-    ? `${variant} color-${color} ${disableShadow && "disable-shadow"}`
+    ? `${variant} color-${color} ${disableShadow && "disable-shadow"} ${size}`
     : undefined;
 
   return (
